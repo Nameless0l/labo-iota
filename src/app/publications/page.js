@@ -79,7 +79,7 @@ const PublicationsPage = () => {
                     Bendo F., Manga M., Kamga S., Ekambi T., Dupont P.
                   </p>
                   <p className="text-gray-600 mb-4">
-                    <span className="font-medium">Journal:</span> African Journal of Environmental Health Sciences, 14(2), 125-138
+                    <span className="font-medium text-gray-700">Journal:</span> African Journal of Environmental Health Sciences, 14(2), 125-138
                   </p>
                   <div className="flex flex-wrap items-center justify-between">
                     <div className="flex flex-wrap gap-2 mb-2 md:mb-0">
@@ -118,7 +118,7 @@ const PublicationsPage = () => {
                     Mbou R., Makongo J., Ndiaye F., Chana A.M.
                   </p>
                   <p className="text-gray-600 mb-4">
-                    <span className="font-medium">Journal:</span> Renewable Energy in Sub-Saharan Africa, 8(3), 214-229
+                    <span className="font-medium text-gray-700">Journal:</span> Renewable Energy in Sub-Saharan Africa, 8(3), 214-229
                   </p>
                   <div className="flex flex-wrap items-center justify-between">
                     <div className="flex flex-wrap gap-2 mb-2 md:mb-0">
@@ -156,7 +156,7 @@ const PublicationsPage = () => {
                     Bendo F., Kamga S., Manga M., Dupont P., Chana A.M.
                   </p>
                   <p className="text-gray-600 mb-4">
-                    <span className="font-medium">Conférence:</span> 5th International Conference on IoT for Development, Cape Town, South Africa
+                    <span className="font-medium text-gray-700">Conférence:</span> 5th International Conference on IoT for Development, Cape Town, South Africa
                   </p>
                   <div className="flex flex-wrap items-center justify-between">
                     <div className="flex flex-wrap gap-2 mb-2 md:mb-0">
@@ -199,7 +199,7 @@ const PublicationsPage = () => {
                   Mbou R., Makongo J., Chana A.M.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium">Journal:</span> IEEE Transactions on Power Electronics, 36(5), 5872-5885
+                  <span className="font-medium text-gray-700">Journal:</span> IEEE Transactions on Power Electronics, 36(5), 5872-5885
                 </p>
                 <div className="flex flex-wrap gap-2 mb-2">
                   <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Onduleur</span>
@@ -231,7 +231,7 @@ const PublicationsPage = () => {
                   Tamo P., Fouda E., Chana A.M.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium">Journal:</span> Smart Agricultural Technology, 2(1), 45-58
+                  <span className="font-medium text-gray-700">Journal:</span> Smart Agricultural Technology, 2(1), 45-58
                 </p>
                 <div className="flex flex-wrap gap-2 mb-2">
                   <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Agriculture</span>
@@ -263,7 +263,7 @@ const PublicationsPage = () => {
                   Bendo F., Makongo J., Chana A.M.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium">Journal:</span> Journal of Medical Devices, 16(3), 031004
+                  <span className="font-medium text-gray-700">Journal:</span> Journal of Medical Devices, 16(3), 031004
                 </p>
                 <div className="flex flex-wrap gap-2 mb-2">
                   <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Santé</span>
@@ -308,7 +308,7 @@ const PublicationsPage = () => {
                   Ngom L., Kengne C., Chana A.M.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium">Conférence:</span> IEEE International Conference on Connected Vehicles, Johannesburg, South Africa
+                  <span className="font-medium text-gray-700">Conférence:</span> IEEE International Conference on Connected Vehicles, Johannesburg, South Africa
                 </p>
                 <div className="flex items-center space-x-3">
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
@@ -335,7 +335,7 @@ const PublicationsPage = () => {
                   Bendo F., Kamga S., Chana A.M.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium">Conférence:</span> Global Health Innovation Conference, Nairobi, Kenya
+                  <span className="font-medium text-gray-700">Conférence:</span> Global Health Innovation Conference, Nairobi, Kenya
                 </p>
                 <div className="flex items-center space-x-3">
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
@@ -375,10 +375,10 @@ const PublicationsPage = () => {
                   Mbarga A.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium">Type:</span> Thèse de doctorat, Université de Yaoundé I
+                  <span className="font-medium text-gray-700">Type:</span> Thèse de doctorat, Université de Yaoundé I
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium">Directeur:</span> Dr. Robert Mbou
+                  <span className="font-medium text-gray-700">Directeur:</span> Dr. Robert Mbou
                 </p>
                 <div className="flex items-center space-x-3">
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
@@ -405,10 +405,10 @@ const PublicationsPage = () => {
                   Atangana M.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium">Type:</span> Mémoire de Master, Université de Yaoundé I
+                  <span className="font-medium text-gray-700">Type:</span> Mémoire de Master, Université de Yaoundé I
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium">Encadrant:</span> Dr. Fatima Bendo
+                  <span className="font-medium text-gray-700">Encadrant:</span> Dr. Fatima Bendo
                 </p>
                 <div className="flex items-center space-x-3">
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">

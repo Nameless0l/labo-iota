@@ -10,7 +10,7 @@ const Footer = () => {
           {/* About */}
           <div>
             <div className="flex items-center mb-4">
-              <img src="/images/logo.svg" alt="IoTA Logo" className="h-10 w-auto" />
+              <img src="/images/logo-iot.png" alt="IoTA Logo" className="h-10 w-auto" />
               <span className="ml-2 font-bold text-xl text-white">IoTA</span>
             </div>
             <p className="mb-4">
@@ -112,16 +112,16 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-emerald-400 flex-shrink-0 mt-1" />
-                <span>Université de Yaoundé I, Faculté des Sciences, Département de Physique, BP 812 Yaoundé, Cameroun</span>
+                <span>Ecole Nationale Superieure de Polytecnique Yaounde, Département du GI(Genie Informatique),BP 9390,Melen, Yaoundé, Cameroun</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-emerald-400 flex-shrink-0" />
-                <span>+237 123 456 789</span>
+                <span>+237 677 487 700</span>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-emerald-400 flex-shrink-0" />
-                <a href="mailto:contact@iota-lab.cm" className="hover:text-emerald-400 transition">
-                  contact@iota-lab.cm
+                <a href="mailto:anne.chana@univ-yaounde1.cm" className="hover:text-emerald-400 transition">
+                  anne.chana@univ-yaounde1.cm
                 </a>
               </li>
             </ul>

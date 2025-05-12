@@ -34,7 +34,7 @@ export default function AboutPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <div>
+            <div> 
               <h2 className="text-3xl font-bold mb-6 section-heading">Notre mission</h2>
               <p className="text-gray-700 mb-4">
                 Notre laboratoire d'électronique a pour mission de concevoir et développer des solutions 
@@ -91,7 +91,7 @@ export default function AboutPage() {
 
           {/* Histoire et évolution */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">Notre histoire</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Notre histoire</h2>
             <div className="max-w-4xl mx-auto">
               <div className="relative">
                 {/* Ligne de temps verticale */}

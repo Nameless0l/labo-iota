@@ -3,19 +3,19 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, Tag, Users, Download, ExternalLink } from 'lucide-react';
 
 export const metadata = {
-  title: 'Régulateur de charge solaire MPPT | Laboratoire d\'Électronique',
-  description: 'Projet de conception et réalisation d\'un régulateur de charge solaire MPPT amélioré pour les systèmes photovoltaïques au Cameroun.',
+  title: 'Onduleur MLI pur sinus | Laboratoire d\'Électronique',
+  description: 'Projet de conception et réalisation d\'un onduleur MLI pur sinus capable de convertir une tension de 12V CC en une tension de 230V CA sinusoïdale.',
 };
 
-export default function MPPTProjectPage() {
+export default function OnduleurMLIProjectPage() {
   return (
     <main className="min-h-screen bg-gray-50 pt-20">
       {/* En-tête du projet avec un dégradé plus moderne et une superposition */}
       <section className="relative h-[500px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/mppt-header-bg.jpg"
-            alt="Energie solaire"
+            src="/images/onduleur-header-bg.jpg"
+            alt="Onduleur MLI"
             fill
             className="object-cover"
             priority
@@ -37,12 +37,11 @@ export default function MPPTProjectPage() {
           </Link>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in">
-            Régulateur de charge solaire MPPT
+            Onduleur MLI pur sinus
           </h1>
           
           <p className="text-white/90 text-xl max-w-3xl mb-8 animate-slide-up">
-            Conception et réalisation d'un régulateur de charge solaire MPPT amélioré pour optimiser 
-            les performances des installations photovoltaïques.
+            Conception et réalisation d'un onduleur générant une onde sinusoïdale pure, compact et performant pour les systèmes d'énergie autonomes.
           </p>
           
           <div className="flex flex-wrap gap-4 animate-slide-up delay-200">
@@ -70,10 +69,10 @@ export default function MPPTProjectPage() {
           <ul className="flex overflow-x-auto space-x-8 py-4">
             <li>
               <a 
-                href="#contexte" 
+                href="#problematique" 
                 className="text-gray-700 hover:text-emerald-600 font-medium whitespace-nowrap border-b-2 border-transparent hover:border-emerald-600 pb-1 transition-all"
               >
-                Contexte
+                Problématique
               </a>
             </li>
             <li>
@@ -116,57 +115,37 @@ export default function MPPTProjectPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
-            {/* Contexte */}
-            <section id="contexte" className="mb-20 scroll-mt-24">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-1 bg-emerald-500 rounded-full mr-4"></div>
-                <h2 className="text-3xl font-bold text-gray-800">Contexte</h2>
-              </div>
-              
-              <div className="prose prose-lg max-w-none text-gray-700">
-                <p className="lead text-xl">
-                  Au Cameroun, les coupures de courant intempestives et fréquentes constituent une source importante de frustration et de difficultés pour les consommateurs.
-                </p>
-                <p>
-                  Ces défaillances du réseau électrique perturbent les foyers et les entreprises, entraînant des pertes économiques considérables et une réduction de la qualité de vie.
-                </p>
-                <p>
-                  L'énergie solaire photovoltaïque offre une solution prometteuse face à cette situation, mais elle présente un défi majeur : le faible rendement des panneaux solaires, généralement situé entre 16% et 23%, limite les performances globales du système.
-                </p>
-                <p>
-                  Pour renforcer ces performances, il devient impératif d'utiliser un régulateur de charge solaire MPPT (Maximum Power Point Tracking) capable d'optimiser l'extraction de l'énergie.
-                </p>
-              </div>
-              
-              {/* Ajout d'une box d'info */}
-              <div className="bg-emerald-50 border-l-4 border-emerald-500 p-6 rounded-r-lg mt-8">
-                <h3 className="text-lg font-semibold text-emerald-800 mb-2">L'essentiel à savoir</h3>
-                <p className="text-gray-700">
-                  Un régulateur MPPT peut améliorer le rendement d'une installation photovoltaïque de 20 à 30% par rapport aux régulateurs conventionnels, en fonction des conditions d'ensoleillement et de température.
-                </p>
-              </div>
-            </section>
-
             {/* Problématique */}
-            <section className="mb-20">
+            <section id="problematique" className="mb-20 scroll-mt-24">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-1 bg-emerald-500 rounded-full mr-4"></div>
                 <h2 className="text-3xl font-bold text-gray-800">Problématique</h2>
               </div>
               
               <div className="prose prose-lg max-w-none text-gray-700">
-                <p>
-                  Le faible rendement des panneaux solaires limite la production photovoltaïque, ce qui restreint le rendement global des installations. Pour améliorer les performances des installations photovoltaïques, notre stratégie s'est orientée vers l'amélioration des performances du régulateur de charge MPPT.
+                <p className="lead text-xl">
+                  L'accès à une source d'électricité stable et fiable constitue un frein majeur au développement économique et social dans de nombreux pays en développement.
                 </p>
                 <p>
-                  C'est dans cette optique que l'entreprise BENDO a initié une réflexion sur la conception et la réalisation d'un chargeur solaire MPPT en utilisant les technologies endogènes.
+                  Les coupures fréquentes et les infrastructures électriques souvent insuffisantes pénalisent lourdement les activités économiques et la qualité de vie. Face à cette situation, les solutions alternatives comme les groupes électrogènes (polluants, bruyants, coûteux) ou les systèmes photovoltaïques (nécessitant une conversion et un stockage d'énergie) présentent des limites.
                 </p>
                 <p>
-                  L'étude des régulateurs MPPT classiques a relevé des failles dans la mesure, ce qui a conduit à la problématique centrale : 
+                  Les onduleurs, qui convertissent le courant continu (CC) des batteries en courant alternatif (CA) utilisable par les appareils, sont essentiels. Cependant, la majorité des onduleurs disponibles sur le marché local sont importés, chers, et génèrent souvent des ondes de sortie de qualité médiocre (carrée ou sinusoïdale modifiée), ce qui peut endommager les équipements électroniques sensibles.
+                </p>
+                <p>
+                  Il n'existe pas de production locale d'onduleurs capables de fournir une onde sinusoïdale pure, similaire à celle du réseau électrique standard.
                 </p>
                 <blockquote className="border-l-4 border-emerald-500 pl-6 py-2 italic bg-gray-50 rounded-r-lg">
-                  <p className="text-emerald-800">En quoi l'amélioration du circuit de mesure des régulateurs MPPT classiques peut améliorer leurs performances ?</p>
+                  <p className="text-emerald-800">Comment concevoir un onduleur générant une onde sinusoïdale pure, qui soit à la fois compact, performant et potentiellement plus abordable, en tirant parti des microcontrôleurs et des techniques modernes d'électronique de puissance ?</p>
                 </blockquote>
+              </div>
+              
+              {/* Ajout d'une box d'info */}
+              <div className="bg-emerald-50 border-l-4 border-emerald-500 p-6 rounded-r-lg mt-8">
+                <h3 className="text-lg font-semibold text-emerald-800 mb-2">L'essentiel à savoir</h3>
+                <p className="text-gray-700">
+                  Une onde sinusoïdale pure est essentielle pour le bon fonctionnement des appareils électroniques sensibles. Contrairement aux onduleurs à onde carrée ou modifiée, un onduleur à onde sinusoïdale pure fournit une alimentation similaire à celle du réseau électrique, garantissant ainsi la longévité des équipements connectés.
+                </p>
               </div>
             </section>
 
@@ -179,7 +158,7 @@ export default function MPPTProjectPage() {
               
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p>
-                  Ce projet visait à concevoir et à réaliser un régulateur de charge solaire MPPT amélioré qui corrige les limitations des conceptions existantes. Les principaux objectifs étaient les suivants :
+                  L'objectif principal de ce travail était de <strong>concevoir et réaliser un prototype fonctionnel d'onduleur MLI (Modulation de Largeur d'Impulsion) capable de convertir une tension de 12V CC en une tension de 230V CA sinusoïdale.</strong>
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
@@ -188,10 +167,10 @@ export default function MPPTProjectPage() {
                       <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mr-3">
                         <span className="text-emerald-700 font-medium">1</span>
                       </div>
-                      <h3 className="font-medium text-gray-700">Conception du convertisseur</h3>
+                      <h3 className="font-medium text-gray-700">Convertisseur CC-CC</h3>
                     </div>
                     <p className="text-gray-600 text-sm ml-11">
-                      Créer un convertisseur abaisseur adapté aux niveaux de tension des panneaux solaires et batteries.
+                      Transformer la tension d'entrée de 12V CC en une tension continue plus élevée (cible de 400V CC).
                     </p>
                   </div>
                   
@@ -200,65 +179,13 @@ export default function MPPTProjectPage() {
                       <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mr-3">
                         <span className="text-emerald-700 font-medium">2</span>
                       </div>
-                      <h3 className="font-medium text-gray-700">Développement algorithme</h3>
+                      <h3 className="font-medium text-gray-700">Convertisseur CC-CA</h3>
                     </div>
                     <p className="text-gray-600 text-sm ml-11">
-                      Optimiser la charge de la batterie tout en suivant le point de puissance maximale.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div className="flex items-center mb-2">
-                      <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mr-3">
-                        <span className="text-emerald-700 font-medium">3</span>
-                      </div>
-                      <h3 className="font-medium text-gray-700">Système de commande</h3>
-                    </div>
-                    <p className="text-gray-600 text-sm ml-11">
-                      Créer un système pour gérer le convertisseur basé sur l'algorithme MPPT.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div className="flex items-center mb-2">
-                      <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mr-3">
-                        <span className="text-emerald-700 font-medium">4</span>
-                      </div>
-                      <h3 className="font-medium text-gray-700">Simulation</h3>
-                    </div>
-                    <p className="text-gray-600 text-sm ml-11">
-                      Simuler le comportement du régulateur à l'aide du logiciel Proteus.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div className="flex items-center mb-2">
-                      <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mr-3">
-                        <span className="text-emerald-700 font-medium">5</span>
-                      </div>
-                      <h3 className="font-medium text-gray-700">Gestion thermique</h3>
-                    </div>
-                    <p className="text-gray-600 text-sm ml-11">
-                      Mettre en œuvre des dissipateurs thermiques pour la régulation de température.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div className="flex items-center mb-2">
-                      <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mr-3">
-                        <span className="text-emerald-700 font-medium">6</span>
-                      </div>
-                      <h3 className="font-medium text-gray-700">Réalisation et test</h3>
-                    </div>
-                    <p className="text-gray-600 text-sm ml-11">
-                      Réaliser un prototype fonctionnel et tester ses performances en conditions réelles.
+                      Générer une tension alternative sinusoïdale de 230V (valeur efficace) à 50 Hz à partir de la tension continue de 400V.
                     </p>
                   </div>
                 </div>
-                
-                <p>
-                  L'objectif ultime était d'améliorer le circuit de mesure des régulateurs MPPT classiques afin d'optimiser leurs performances globales.
-                </p>
               </div>
             </section>
 
@@ -280,9 +207,9 @@ export default function MPPTProjectPage() {
                       <div className="absolute -left-10 top-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center">
                         <span className="text-white font-bold">1</span>
                       </div>
-                      <h3 className="text-xl font-bold text-emerald-700 mb-3">Conception du convertisseur abaisseur</h3>
+                      <h3 className="text-xl font-bold text-emerald-700 mb-3">Conception du convertisseur CC-CC</h3>
                       <p>
-                        Nous avons développé un convertisseur CC-CC de type abaisseur (buck) capable d'adapter la tension d'entrée provenant des panneaux solaires (15V-70V) aux besoins de charge des batteries (12V ou 24V).
+                        Nous avons adopté une architecture de type "push-pull" utilisant un circuit intégré SG3525 et des transformateurs à noyau de ferrite pour élever la tension de 12V à environ 400V CC.
                       </p>
                     </div>
                     
@@ -290,9 +217,9 @@ export default function MPPTProjectPage() {
                       <div className="absolute -left-10 top-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center">
                         <span className="text-white font-bold">2</span>
                       </div>
-                      <h3 className="text-xl font-bold text-emerald-700 mb-3">Développement de l'algorithme MPPT</h3>
+                      <h3 className="text-xl font-bold text-emerald-700 mb-3">Conception du convertisseur CC-CA</h3>
                       <p>
-                        L'algorithme "Perturbation et Observation" (P&O) a été implémenté pour suivre dynamiquement le point de puissance maximale des panneaux solaires, en adaptant continuellement le rapport cyclique de la commande MLI en fonction des conditions d'ensoleillement.
+                        Mise en œuvre d'un onduleur en pont complet (pont en H) commandé par un microcontrôleur PIC16F88 pour générer une onde sinusoïdale à partir de la tension continue.
                       </p>
                     </div>
                     
@@ -300,9 +227,9 @@ export default function MPPTProjectPage() {
                       <div className="absolute -left-10 top-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center">
                         <span className="text-white font-bold">3</span>
                       </div>
-                      <h3 className="text-xl font-bold text-emerald-700 mb-3">Conception du circuit de mesure</h3>
+                      <h3 className="text-xl font-bold text-emerald-700 mb-3">Implémentation de la MLIS</h3>
                       <p>
-                        Un circuit de mesure de tension avec isolation galvanique a été conçu pour séparer les circuits de puissance et de commande, réduisant ainsi l'impact des interférences de masse sur la précision des mesures.
+                        Développement de la Modulation de Largeur d'Impulsion Sinusoïdale sur le microcontrôleur PIC16F88 pour garantir une forme d'onde de sortie sinusoïdale pure.
                       </p>
                     </div>
                     
@@ -310,9 +237,9 @@ export default function MPPTProjectPage() {
                       <div className="absolute -left-10 top-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center">
                         <span className="text-white font-bold">4</span>
                       </div>
-                      <h3 className="text-xl font-bold text-emerald-700 mb-3">Simulation et validation</h3>
+                      <h3 className="text-xl font-bold text-emerald-700 mb-3">Conception du filtre de sortie</h3>
                       <p>
-                        Le comportement du système a été simulé à l'aide du logiciel Proteus pour valider les performances du convertisseur et de l'algorithme MPPT dans différentes conditions de fonctionnement.
+                        Mise en place d'un filtre LC approprié pour éliminer les harmoniques indésirables et obtenir une forme d'onde sinusoïdale pure.
                       </p>
                     </div>
                     
@@ -322,7 +249,7 @@ export default function MPPTProjectPage() {
                       </div>
                       <h3 className="text-xl font-bold text-emerald-700 mb-3">Réalisation et tests</h3>
                       <p>
-                        La conception a été implémentée sur PCB et le prototype a été assemblé et testé dans des conditions réelles d'utilisation.
+                        Assemblage du prototype et réalisation de tests pour valider les performances en conditions réelles d'utilisation.
                       </p>
                     </div>
                   </div>
@@ -339,19 +266,31 @@ export default function MPPTProjectPage() {
               
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p>
-                  Le projet a abouti avec succès à la conception et à la réalisation d'un prototype de régulateur de charge MPPT. Les principaux résultats sont les suivants :
+                  Le projet a permis d'aboutir à la réalisation et à la validation d'un prototype d'onduleur MLI pur sinus présentant les caractéristiques suivantes :
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                   <div className="bg-gradient-to-br from-emerald-50 to-white rounded-xl shadow-md p-6">
                     <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Architecture Innovante</h3>
+                    <p className="text-gray-600">
+                      Conception en deux étages avec un convertisseur "push-pull" et un onduleur en pont complet commandé par microcontrôleur.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-emerald-50 to-white rounded-xl shadow-md p-6">
+                    <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Convertisseur abaisseur</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Compacité</h3>
                     <p className="text-gray-600">
-                      Conception fonctionnelle adaptant la tension d'entrée de 15V-70V pour charger des batteries de 12V ou 24V.
+                      Réduction significative de la taille et du poids grâce aux transformateurs haute fréquence à noyau de ferrite.
                     </p>
                   </div>
                   
@@ -361,33 +300,21 @@ export default function MPPTProjectPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Algorithme MPPT optimisé</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Sortie Sinusoïdale Pure</h3>
                     <p className="text-gray-600">
-                      Implémentation de l'algorithme "Perturbation et Observation" pour suivre dynamiquement le point de puissance maximale.
+                      Génération d'une tension de sortie sinusoïdale pure à 50 Hz avec une tension efficace proche de 230V.
                     </p>
                   </div>
                   
                   <div className="bg-gradient-to-br from-emerald-50 to-white rounded-xl shadow-md p-6">
                     <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Circuit de mesure amélioré</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Coût Maîtrisé</h3>
                     <p className="text-gray-600">
-                      Circuit avec isolation galvanique réduisant l'impact des interférences de masse sur la précision des mesures.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-emerald-50 to-white rounded-xl shadow-md p-6">
-                    <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Gestion thermique efficace</h3>
-                    <p className="text-gray-600">
-                      Solution utilisant des dissipateurs thermiques pour réguler efficacement la température des composants.
+                      Coût de réalisation du prototype d'environ 158 500 FCFA, démontrant le potentiel d'une solution plus abordable.
                     </p>
                   </div>
                 </div>
@@ -395,7 +322,7 @@ export default function MPPTProjectPage() {
                 <div className="bg-emerald-700 text-white p-6 rounded-lg my-8">
                   <h3 className="text-xl font-bold mb-4">Résultat clé</h3>
                   <p className="text-emerald-50">
-                    Le prototype réalisé a démontré un gain de rendement d'environ 25% par rapport aux régulateurs conventionnels, confirmant ainsi l'efficacité des améliorations apportées au circuit de mesure.
+                    Le prototype réalisé délivre une puissance nominale de 1000 Watts avec un rendement cible de 85%, démontrant la viabilité d'une production locale d'onduleurs performants à onde sinusoïdale pure.
                   </p>
                 </div>
               </div>
@@ -408,18 +335,18 @@ export default function MPPTProjectPage() {
                 <h2 className="text-3xl font-bold text-gray-800">Illustrations</h2>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div className="transform transition-all duration-300 hover:scale-105">
                   <div className="bg-white p-4 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition-shadow">
                     <div className="relative h-64 mb-4 overflow-hidden rounded-md img-zoom">
                       <Image
-                        src="/images/projects/mppt-schema-bloc.png"
-                        alt="Schéma bloc du régulateur MPPT"
+                        src="/images/projects/onduleur-schema.jpg"
+                        alt="Schéma du convertisseur CC-CC"
                         fill
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-sm text-gray-600 text-center font-medium">Figure 1. Schéma bloc du régulateur MPPT</p>
+                    <p className="text-sm text-gray-600 text-center font-medium">Figure 1. Schéma du convertisseur CC-CC</p>
                   </div>
                 </div>
                 
@@ -427,44 +354,45 @@ export default function MPPTProjectPage() {
                   <div className="bg-white p-4 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition-shadow">
                     <div className="relative h-64 mb-4 overflow-hidden rounded-md img-zoom">
                       <Image
-                        src="/images/projects/mppt-algorithme.png"
-                        alt="Algorithme MPPT"
+                        src="/images/projects/onduleur-prototype.jpg"
+                        alt="Prototype de l'onduleur"
                         fill
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-sm text-gray-600 text-center font-medium">Figure 2. Algorithme MPPT</p>
+                    <p className="text-sm text-gray-600 text-center font-medium">Figure 2. Prototype de l'onduleur</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div className="transform transition-all duration-300 hover:scale-105">
                   <div className="bg-white p-4 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition-shadow">
                     <div className="relative h-64 mb-4 overflow-hidden rounded-md img-zoom">
                       <Image
-                        src="/images/projects/mppt-circuit-mesure.png"
-                        alt="Circuit de mesure en tension avec isolation galvanique"
+                        src="/images/projects/onduleur-sinus.jpg"
+                        alt="Onde sinusoïdale générée"
                         fill
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-sm text-gray-600 text-center font-medium">Figure 3. Circuit de mesure en tension avec isolation galvanique</p>
+                    <p className="text-sm text-gray-600 text-center font-medium">Figure 1. Illustration</p>
                   </div>
                 </div>
-                                <div className="transform transition-all duration-300 hover:scale-105">
+{/*                 
+                <div className="transform transition-all duration-300 hover:scale-105">
                   <div className="bg-white p-4 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition-shadow">
                     <div className="relative h-64 mb-4 overflow-hidden rounded-md img-zoom">
                       <Image
-                        src="/images/projects/mppt-pcb-front.png"
-                        alt="Face avant du circuit imprimé"
+                        src="/images/projects/onduleur-circuit.jpg"
+                        alt="Circuit de l'onduleur"
                         fill
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-sm text-gray-600 text-center font-medium">Figure 5. Face avant du circuit imprimé</p>
+                    <p className="text-sm text-gray-600 text-center font-medium">Figure 4. Circuit de l'onduleur</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
           </div>
@@ -480,8 +408,8 @@ export default function MPPTProjectPage() {
                   Domaine
                 </h4>
                 <div className="flex flex-wrap gap-2 ml-4">
+                  <span className="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">Électronique de puissance</span>
                   <span className="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">Énergie renouvelable</span>
-                  <span className="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">Systèmes photovoltaïques</span>
                 </div>
               </div>
               
@@ -495,31 +423,70 @@ export default function MPPTProjectPage() {
                     <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    Électronique de puissance
+                    Microcontrôleur PIC16F88
                   </li>
                   <li className="flex items-center text-gray-600">
                     <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    Microcontrôleurs
+                    Circuit intégré SG3525
                   </li>
                   <li className="flex items-center text-gray-600">
                     <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    Algorithmes MPPT
+                    MLI Sinusoïdale (MLIS)
                   </li>
                   <li className="flex items-center text-gray-600">
                     <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    Isolation galvanique
+                    Transformateurs ferrite
                   </li>
                   <li className="flex items-center text-gray-600">
                     <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    Simulation Proteus
+                    Pont en H
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-700 mb-3 flex items-center">
+                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  Spécifications
+                </h4>
+                <ul className="space-y-2 ml-4">
+                  <li className="flex items-center text-gray-600">
+                    <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Tension d'entrée: 12V CC
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Tension de sortie: 230V CA (240V mesurés)
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Fréquence: 50 Hz
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Puissance: 1000 Watts
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Rendement cible: 85%
                   </li>
                 </ul>
               </div>
@@ -534,30 +501,30 @@ export default function MPPTProjectPage() {
                     <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    Installations photovoltaïques domestiques
+                    Systèmes photovoltaïques autonomes
                   </li>
                   <li className="flex items-center text-gray-600">
                     <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    Systèmes d'énergie solaire ruraux
+                    Systèmes d'alimentation de secours
                   </li>
                   <li className="flex items-center text-gray-600">
                     <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    Alimentation de secours
+                    Équipements électroniques sensibles
                   </li>
                   <li className="flex items-center text-gray-600">
                     <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    Applications IoT autonomes
+                    Zones rurales sans accès au réseau
                   </li>
                 </ul>
               </div>
               
-              {/* <div className="mb-6">
+              <div className="mb-6">
                 <h4 className="font-semibold text-gray-700 mb-3 flex items-center">
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
                   Équipe
@@ -565,33 +532,15 @@ export default function MPPTProjectPage() {
                 <div className="space-y-4 ml-4">
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mr-3">
-                      <span className="text-emerald-700 font-medium">RM</span>
+                      <span className="text-emerald-700 font-medium">AC</span>
                     </div>
                     <div>
-                      <p className="font-medium text-gray-800">Dr. Robert MBOU</p>
-                      <p className="text-xs text-gray-500">Chef de projet</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mr-3">
-                      <span className="text-emerald-700 font-medium">JM</span>
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-800">Jean MAKONGO</p>
-                      <p className="text-xs text-gray-500">Ingénieur électronique</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mr-3">
-                      <span className="text-emerald-700 font-medium">FN</span>
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-800">Fanta NDIAYE</p>
-                      <p className="text-xs text-gray-500">Ingénieure électronique</p>
+                      <p className="font-medium text-gray-800">Dr. Anne CHANA</p>
+                      <p className="text-xs text-gray-500">Superviseur</p>
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
               
               <h4 className="font-semibold text-gray-700 mb-3 flex items-center">
                 <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
@@ -599,18 +548,18 @@ export default function MPPTProjectPage() {
               </h4>
               <div className="space-y-4">
                 <Link 
-                  href="/projects/onduleur-mli" 
+                  href="/projects/regulateur-charge-solaire-mppt" 
                   className="flex items-center p-3 bg-gray-50 rounded-lg border border-gray-100 hover:bg-emerald-50 hover:border-emerald-200 transition-colors group"
                 >
                   <div className="relative w-16 h-16 mr-3 overflow-hidden rounded-md">
                     <Image
-                      src="/images/projects/onduleur-sinus.jpg"
-                      alt="Onduleur MLI"
+                      src="/images/mppt-thumb.jpg"
+                      alt="Régulateur MPPT"
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <span className="text-gray-800 font-medium group-hover:text-emerald-700 transition-colors">Onduleur MLI à onde sinusoïdale pure</span>
+                  <span className="text-gray-800 font-medium group-hover:text-emerald-700 transition-colors">Régulateur de charge solaire MPPT</span>
                 </Link>
                 
                 <Link 
@@ -619,7 +568,7 @@ export default function MPPTProjectPage() {
                 >
                   <div className="relative w-16 h-16 mr-3 overflow-hidden rounded-md">
                     <Image
-                      src="/images/projects/palus.png"
+                      src="/images/malaria-cam-thumb.jpg"
                       alt="Malaria-CAM"
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-300"
@@ -632,8 +581,7 @@ export default function MPPTProjectPage() {
               {/* Boutons d'action */}
               <div className="mt-8 border-t pt-6">
                 <a 
-                  href="/docs/Description du projet portant sur la conception et la réalisation d'un régulateur de charge solaire MPPT_032946.docx"
-                  download 
+                  href="#" 
                   className="bg-emerald-600 text-white w-full py-3 px-4 rounded-lg flex items-center justify-center font-medium hover:bg-emerald-700 transition-colors mb-3"
                 >
                   <Download className="w-5 h-5 mr-2" />
@@ -657,7 +605,7 @@ export default function MPPTProjectPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Vous avez un projet similaire en tête ?</h2>
           <p className="text-emerald-100 max-w-2xl mx-auto mb-8">
-            Notre équipe peut vous aider à développer des solutions sur mesure pour l'optimisation des systèmes d'énergie renouvelable.
+            Notre équipe peut vous aider à développer des solutions d'alimentation électrique adaptées à vos besoins spécifiques.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

@@ -166,7 +166,7 @@ export default function MPPTProjectPage() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             {/* Project Info */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-6">
+            <div className="bg-white rounded-lg shadow-lg text-gray-500 overflow-hidden mb-6">
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-gray-800">Informations</h3>
                 <div className="space-y-3">
@@ -215,7 +215,7 @@ export default function MPPTProjectPage() {
                       <span className="text-emerald-600 font-medium">DR</span>
                     </div>
                     <div>
-                      <p className="font-medium">Dr. Robert Mbou</p>
+                      <p className="font-medium text-gray-700">Dr. Robert Mbou</p>
                       <p className="text-sm text-gray-500">Chef de projet</p>
                     </div>
                   </li>
@@ -224,7 +224,7 @@ export default function MPPTProjectPage() {
                       <span className="text-emerald-600 font-medium">JM</span>
                     </div>
                     <div>
-                      <p className="font-medium">Jean Makongo</p>
+                      <p className="font-medium text-gray-700">Jean Makongo</p>
                       <p className="text-sm text-gray-500">Ingénieur électronique</p>
                     </div>
                   </li>
@@ -233,7 +233,7 @@ export default function MPPTProjectPage() {
                       <span className="text-emerald-600 font-medium">FN</span>
                     </div>
                     <div>
-                      <p className="font-medium">Fanta Ndiaye</p>
+                      <p className="font-medium text-gray-700">Fanta Ndiaye</p>
                       <p className="text-sm text-gray-500">Ingénieure électronique</p>
                     </div>
                   </li>
@@ -250,7 +250,7 @@ export default function MPPTProjectPage() {
                     <div className="flex items-start">
                       <FileText className="w-5 h-5 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
                       <div>
-                        <p className="font-medium mb-1">Amélioration des performances des régulateurs MPPT pour installations photovoltaïques</p>
+                        <p className="font-medium mb-1 text-gray-700">Amélioration des performances des régulateurs MPPT pour installations photovoltaïques</p>
                         <p className="text-sm text-gray-500">Conférence internationale sur les énergies renouvelables, 2023</p>
                       </div>
                     </div>
@@ -259,7 +259,7 @@ export default function MPPTProjectPage() {
                     <div className="flex items-start">
                       <FileText className="w-5 h-5 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
                       <div>
-                        <p className="font-medium mb-1">Conception d'un circuit de mesure avec isolation galvanique pour régulateurs MPPT</p>
+                        <p className="font-medium mb-1 text-gray-700">Conception d'un circuit de mesure avec isolation galvanique pour régulateurs MPPT</p>
                         <p className="text-sm text-gray-500">Journal of Power Electronics, 2024</p>
                       </div>
                     </div>

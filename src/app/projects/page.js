@@ -88,7 +88,7 @@ const ProjectsPage = () => {
                     </div>
                   </div>
                   <a 
-                    href="/projects/mppt" 
+                    href="/projects/regulateur-charge-solaire-mppt" 
                     className="text-emerald-600 font-medium hover:text-emerald-700 flex items-center"
                   >
                     Détails <ArrowRight className="ml-1 w-4 h-4" />
@@ -121,7 +121,7 @@ const ProjectsPage = () => {
                     </div>
                   </div>
                   <a 
-                    href="/projects/onduleur-mli" 
+                    href="/projects/regulateur-charge-solaire-mppt" 
                     className="text-emerald-600 font-medium hover:text-emerald-700 flex items-center"
                   >
                     Détails <ArrowRight className="ml-1 w-4 h-4" />

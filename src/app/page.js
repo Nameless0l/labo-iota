@@ -1,37 +1,49 @@
 import React from 'react';
+import Image from 'next/image';
 import { ArrowRight, Award, Zap, Microscope, Activity, Shield } from 'lucide-react';
 
 const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-screen bg-gradient-to-r from-emerald-600 to-teal-500">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
-        </div>
-        
-        <div className="relative h-full flex flex-col justify-center items-center text-white px-4 max-w-6xl mx-auto">
-          <div className="mb-8">
-            <img src="/images/logo-iot.png" alt="IoTA Logo" className="w-32 h-32" />
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-center mb-6">
-            IoT & Applications
-          </h1>
-          <p className="text-xl md:text-2xl text-center max-w-3xl mb-12">
-            Solutions IoT innovantes au service du développement durable et de la société camerounaise
-          </p>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
-            <a href="/projects" className="bg-white text-emerald-700 hover:bg-emerald-100 transition px-8 py-3 rounded-lg font-medium flex items-center justify-center">
-              Découvrir nos projets <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-            <a href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-emerald-700 transition px-8 py-3 rounded-lg font-medium flex items-center justify-center">
-              Nous contacter
-            </a>
-          </div>
-        </div>
+      <div className="relative h-screen">
+      {/* Image d'arrière-plan */}
+      <div className="absolute inset-0">
+        <Image 
+          src="/images/iot.png" 
+          alt="Fond technologique IoT"
+          fill
+          className="object-cover"
+          priority
+        />
       </div>
       
+      {/* Superpositions */}
+      <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/80 to-teal-500/80"></div>
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
+      
+      <div className="relative h-full flex flex-col justify-center items-center text-white px-4 max-w-6xl mx-auto">
+        <div className="mb-8">
+          <img src="/images/logo-iot.png" alt="IoTA Logo" className="w-32 h-32" />
+        </div>
+        <h1 className="text-5xl md:text-7xl font-bold text-center mb-6">
+          IoT & Applications
+        </h1>
+        <p className="text-xl md:text-2xl text-center max-w-3xl mb-12">
+          Solutions IoT innovantes au service du développement durable et de la société camerounaise
+        </p>
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+          <a href="/projects" className="bg-white text-emerald-700 hover:bg-emerald-100 transition px-8 py-3 rounded-lg font-medium flex items-center justify-center">
+            Découvrir nos projets <ArrowRight className="ml-2 w-5 h-5" />
+          </a>
+          <a href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-emerald-700 transition px-8 py-3 rounded-lg font-medium flex items-center justify-center">
+            Nous contacter
+          </a>
+        </div>
+      </div>
+    </div>
+      {/* About Section */}    
       {/* Mission Section */}
       <div className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -95,7 +107,13 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             {/* Project 1 */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-              <div className="h-48 bg-emerald-300 relative">
+              <div className="h-48 relative">
+                <Image 
+                  src="/images/projects/mppt-solar-charger-controller-system-diagram.jpg" 
+                  alt="Régulateur de charge solaire MPPT" 
+                  fill 
+                  className="object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                 <div className="absolute bottom-0 left-0 p-4">
                   <span className="bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded">Énergie</span>
@@ -114,7 +132,13 @@ const HomePage = () => {
             
             {/* Project 2 */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-              <div className="h-48 bg-emerald-300 relative">
+              <div className="h-48 relative">
+                <Image 
+                  src="/images/projects/palus.png" 
+                  alt="Projet CAM-MALARIA" 
+                  fill 
+                  className="object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                 <div className="absolute bottom-0 left-0 p-4">
                   <span className="bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded">Santé</span>
@@ -133,7 +157,13 @@ const HomePage = () => {
             
             {/* Project 3 */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-              <div className="h-48 bg-emerald-300 relative">
+              <div className="h-48 relative">
+                <Image 
+                  src="/images/projects/onduleur-sinus.jpg" 
+                  alt="Onduleur MLI pur sinus" 
+                  fill 
+                  className="object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                 <div className="absolute bottom-0 left-0 p-4">
                   <span className="bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded">Énergie</span>
@@ -204,7 +234,7 @@ const HomePage = () => {
       {/* Call to Action */}
       <div className="py-16 bg-emerald-700 text-white">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Collaborer avec notre laboratoire</h2>
+          <h2 className="text-white text-3xl font-bold mb-8">Collaborer avec notre laboratoire</h2>
           <p className="text-xl mb-10 max-w-3xl mx-auto">
             Vous êtes une entreprise, une institution ou un chercheur intéressé par l'IoT pour le développement durable ? 
             Contactez-nous pour explorer les possibilités de collaboration.
