@@ -124,7 +124,7 @@ const HomePage = () => {
                 <p className="text-gray-600 mb-4">
                   Amélioration des performances des installations photovoltaïques grâce à un régulateur optimisé
                 </p>
-                <a href="/projects/mppt" className="text-emerald-600 font-medium hover:text-emerald-700 flex items-center">
+                <a href="/projects/regulateur-charge-solaire-mppt" className="text-emerald-600 font-medium hover:text-emerald-700 flex items-center">
                   En savoir plus <ArrowRight className="ml-1 w-4 h-4" />
                 </a>
               </div>
