@@ -123,9 +123,9 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Adresse</h3>
                     <p className="text-gray-600">
-                      Université de Yaoundé I, Faculté des Sciences<br />
-                      Département de Physique<br />
-                      BP 812 Yaoundé, Cameroun
+                      Ecole Nationale Superieure de Polytecnique Yaounde,<br/> 
+                      Département du GI(Genie Informatique),BP 9390,<br/>
+                      Melen, Yaoundé, Cameroun
                     </p>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Téléphone</h3>
-                    <p className="text-gray-600">+237 123 456 789</p>
+                    <p className="text-gray-600">+237 677 487 700</p>
                   </div>
                 </div>
                 
@@ -146,7 +146,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
-                    <p className="text-gray-600">contact@iota-lab.cm</p>
+                    <p className="text-gray-600">anne.chana@univ-yaounde1.cm</p>
                   </div>
                 </div>
                 
@@ -185,7 +185,6 @@ const ContactPage = () => {
                   Notre laboratoire est situé au sein de la Faculté des Sciences de l'Université de Yaoundé I. 
                   N'hésitez pas à prendre rendez-vous pour visiter nos installations.
                 </p>
-                <a href="#" className="text-emerald-200 underline hover:text-white">Voir sur la carte</a>
               </div>
             </div>
           </div>

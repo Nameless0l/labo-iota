@@ -58,9 +58,9 @@ const TeamPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Prof. Anne Marie CHANA</h3>
-                <p className="text-emerald-600 font-medium mb-4">Directrice du Laboratoire</p>
+                <p className="text-emerald-600 font-medium mb-4">-</p>
                 <p className="text-gray-600 mb-6">
-                  Spécialiste en électronique et en IoT, le Pr. CHANA dirige le laboratoire depuis sa création. Elle a plus de 15 ans d'expérience dans la recherche appliquée.
+                  Spécialiste en électronique et en IoT, le Dr. CHANA dirige le laboratoire depuis sa création. 
                 </p>
                 <div className="flex space-x-3">
                   <a href="mailto:anne.chana@univ-yaounde1.cm" className="p-2 bg-gray-100 rounded-full hover:bg-emerald-100 transition">

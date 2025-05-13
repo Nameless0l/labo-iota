@@ -63,7 +63,12 @@ const ProjectsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* Project 1 */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:shadow-xl hover:-translate-y-1">
-              <div className="h-48 bg-emerald-200 relative">
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src="/images/projects/mppt-schema-bloc.png" 
+                  alt="Régulateur de charge solaire MPPT" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute top-4 left-4">
                   <span className="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     ODD 7
@@ -99,7 +104,12 @@ const ProjectsPage = () => {
             
             {/* Project 2 */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:shadow-xl hover:-translate-y-1">
-              <div className="h-48 bg-emerald-200 relative">
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src="/images/projects/onduleur-sinus.jpg" 
+                  alt="Onduleur MLI pur sinus" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute top-4 left-4">
                   <span className="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     ODD 7
@@ -121,7 +131,7 @@ const ProjectsPage = () => {
                     </div>
                   </div>
                   <a 
-                    href="/projects/regulateur-charge-solaire-mppt" 
+                    href="/projects/onduleur-mli-pur-sinus" 
                     className="text-emerald-600 font-medium hover:text-emerald-700 flex items-center"
                   >
                     Détails <ArrowRight className="ml-1 w-4 h-4" />
@@ -137,7 +147,12 @@ const ProjectsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* Project 3 */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:shadow-xl hover:-translate-y-1">
-              <div className="h-48 bg-red-200 relative">
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src="/images/projects/palus.png" 
+                  alt="CAM-MALARIA" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute top-4 left-4">
                   <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     ODD 3
@@ -173,7 +188,12 @@ const ProjectsPage = () => {
             
             {/* Project 4 */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:shadow-xl hover:-translate-y-1">
-              <div className="h-48 bg-red-200 relative">
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src="/images/projects/femmes.png" 
+                  alt="Suivi des femmes enceintes" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute top-4 left-4">
                   <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     ODD 3
@@ -195,7 +215,7 @@ const ProjectsPage = () => {
                     </div>
                   </div>
                   <a 
-                    href="/projects/pregnant-women-monitoring" 
+                    href="#" 
                     className="text-emerald-600 font-medium hover:text-emerald-700 flex items-center"
                   >
                     Détails <ArrowRight className="ml-1 w-4 h-4" />
@@ -206,7 +226,12 @@ const ProjectsPage = () => {
             
             {/* Project 5 */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:shadow-xl hover:-translate-y-1">
-              <div className="h-48 bg-red-200 relative">
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src="/images/projects/prothese.png" 
+                  alt="Prothèse auditive Balafon" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute top-4 left-4">
                   <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     ODD 3
@@ -244,7 +269,12 @@ const ProjectsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* Project 6 */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:shadow-xl hover:-translate-y-1">
-              <div className="h-48 bg-yellow-200 relative">
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src="/images/projects/recommendation.png" 
+                  alt="Système de recommandation de cultures" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute top-4 left-4">
                   <span className="bg-yellow-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     ODD 2
@@ -266,7 +296,7 @@ const ProjectsPage = () => {
                     </div>
                   </div>
                   <a 
-                    href="/projects/agriculture" 
+                    href="#" 
                     className="text-emerald-600 font-medium hover:text-emerald-700 flex items-center"
                   >
                     Détails <ArrowRight className="ml-1 w-4 h-4" />
@@ -282,7 +312,12 @@ const ProjectsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 7 */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:shadow-xl hover:-translate-y-1">
-              <div className="h-48 bg-blue-200 relative">
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src="/images/projects/falaise.png" 
+                  alt="Sécurité routière - Falaise de Dschang" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute top-4 left-4">
                   <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     ODD 11
@@ -304,7 +339,7 @@ const ProjectsPage = () => {
                     </div>
                   </div>
                   <a 
-                    href="/projects/road-safety" 
+                    href="#" 
                     className="text-emerald-600 font-medium hover:text-emerald-700 flex items-center"
                   >
                     Détails <ArrowRight className="ml-1 w-4 h-4" />

@@ -36,11 +36,11 @@ const PublicationsPage = () => {
               </select>
               <select className="bg-gray-100 border border-gray-200 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                 <option value="">Toutes les années</option>
+                <option value="2025">2025</option>
                 <option value="2024">2024</option>
                 <option value="2023">2023</option>
                 <option value="2022">2022</option>
                 <option value="2021">2021</option>
-                <option value="2020">2020</option>
               </select>
             </div>
             <div className="relative w-full md:w-auto">
@@ -63,28 +63,67 @@ const PublicationsPage = () => {
             <h2 className="text-2xl font-bold mb-6 text-gray-800">Publications récentes</h2>
             
             <div className="space-y-6">
-              {/* Publication 1 */}
+              {/* Publication 1 - Hearing Aid Paper */}
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
+                <div className="p-6">
+                  <div className="flex items-center mb-2 text-sm text-gray-500">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    <span className="mr-4">2025</span>
+                    <Tag className="w-4 h-4 mr-1" />
+                    <span>Article scientifique</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-800">
+                    An Ontology-Based Expert System Approach for Hearing Aid Fitting in a Chaotic Environment
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Ngounou, G.M., Chana, A.M., Batchakui, B., Nguen, K.A., Fokouo Fogha, J.V.
+                  </p>
+                  <p className="text-gray-600 mb-4">
+                    <span className="font-medium text-gray-700">Journal:</span> Audiology Research, 15(2), 39
+                  </p>
+                  <div className="flex flex-wrap items-center justify-between">
+                    <div className="flex flex-wrap gap-2 mb-2 md:mb-0">
+                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Prothèse auditive</span>
+                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Ontologie</span>
+                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Système expert</span>
+                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">DHAFES</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-sm font-medium">
+                        <ExternalLink className="w-4 h-4 mr-1" />
+                        Lire
+                      </a>
+                      <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-sm font-medium">
+                        <Download className="w-4 h-4 mr-1" />
+                        PDF
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Publication 2 - Malaria-CAM */}
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
                 <div className="p-6">
                   <div className="flex items-center mb-2 text-sm text-gray-500">
                     <Calendar className="w-4 h-4 mr-1" />
                     <span className="mr-4">2024</span>
                     <Tag className="w-4 h-4 mr-1" />
-                    <span>Article scientifique</span>
+                    <span>Projet de recherche</span>
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-gray-800">
-                    Amélioration de la prédiction du paludisme au Cameroun grâce à l'intégration de données météorologiques et environnementales
+                    CAM-MALARIA: Un système de surveillance du paludisme basé sur l'IoT pour le Cameroun
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Bendo F., Manga M., Kamga S., Ekambi T., Dupont P.
+                    Chana A.M., Batchakui B., et al.
                   </p>
                   <p className="text-gray-600 mb-4">
-                    <span className="font-medium text-gray-700">Journal:</span> African Journal of Environmental Health Sciences, 14(2), 125-138
+                    <span className="font-medium text-gray-700">Projet:</span> Système de prédiction et de surveillance du paludisme
                   </p>
                   <div className="flex flex-wrap items-center justify-between">
                     <div className="flex flex-wrap gap-2 mb-2 md:mb-0">
-                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Paludisme</span>
                       <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">IoT</span>
+                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Paludisme</span>
                       <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Prédiction</span>
                       <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Santé publique</span>
                     </div>
@@ -102,68 +141,30 @@ const PublicationsPage = () => {
                 </div>
               </div>
               
-              {/* Publication 2 */}
+              {/* Publication 3 - MPPT Solar Charge Controller */}
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
                 <div className="p-6">
                   <div className="flex items-center mb-2 text-sm text-gray-500">
                     <Calendar className="w-4 h-4 mr-1" />
-                    <span className="mr-4">2023</span>
+                    <span className="mr-4">2024</span>
                     <Tag className="w-4 h-4 mr-1" />
-                    <span>Article scientifique</span>
+                    <span>Rapport technique</span>
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-gray-800">
-                    Conception et évaluation d'un régulateur de charge solaire MPPT à haut rendement pour les régions rurales du Cameroun
+                    Conception et réalisation d'un régulateur de charge solaire MPPT
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Mbou R., Makongo J., Ndiaye F., Chana A.M.
+                    Projet BENDO
                   </p>
                   <p className="text-gray-600 mb-4">
-                    <span className="font-medium text-gray-700">Journal:</span> Renewable Energy in Sub-Saharan Africa, 8(3), 214-229
+                    <span className="font-medium text-gray-700">Contexte:</span> Solution aux coupures d'électricité au Cameroun par l'optimisation des systèmes photovoltaïques
                   </p>
                   <div className="flex flex-wrap items-center justify-between">
                     <div className="flex flex-wrap gap-2 mb-2 md:mb-0">
                       <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Énergie solaire</span>
                       <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">MPPT</span>
-                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Électrification rurale</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-sm font-medium">
-                        <ExternalLink className="w-4 h-4 mr-1" />
-                        Lire
-                      </a>
-                      <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-sm font-medium">
-                        <Download className="w-4 h-4 mr-1" />
-                        PDF
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Publication 3 */}
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
-                <div className="p-6">
-                  <div className="flex items-center mb-2 text-sm text-gray-500">
-                    <Calendar className="w-4 h-4 mr-1" />
-                    <span className="mr-4">2023</span>
-                    <Tag className="w-4 h-4 mr-1" />
-                    <span>Conférence</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">
-                    CAM-MALARIA: Un système de surveillance du paludisme basé sur l'IoT pour le Cameroun
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Bendo F., Kamga S., Manga M., Dupont P., Chana A.M.
-                  </p>
-                  <p className="text-gray-600 mb-4">
-                    <span className="font-medium text-gray-700">Conférence:</span> 5th International Conference on IoT for Development, Cape Town, South Africa
-                  </p>
-                  <div className="flex flex-wrap items-center justify-between">
-                    <div className="flex flex-wrap gap-2 mb-2 md:mb-0">
-                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">IoT</span>
-                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Paludisme</span>
-                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Surveillance</span>
-                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Capteurs</span>
+                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Convertisseur abaisseur</span>
+                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Électricité durable</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-sm font-medium">
@@ -186,89 +187,89 @@ const PublicationsPage = () => {
             <h2 className="text-2xl font-bold mb-6 text-gray-800">Articles scientifiques</h2>
             
             <div className="divide-y">
-              {/* Article 1 */}
+              {/* Article 1 - Hearing Aid */}
+              <div className="py-4">
+                <div className="flex items-center text-sm text-gray-500 mb-1">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <span>2025</span>
+                </div>
+                <h3 className="text-lg font-semibold mb-1 text-gray-800">
+                  An Ontology-Based Expert System Approach for Hearing Aid Fitting in a Chaotic Environment
+                </h3>
+                <p className="text-gray-600 mb-2">
+                  Ngounou, G.M., Chana, A.M., Batchakui, B., Nguen, K.A., Fokouo Fogha, J.V.
+                </p>
+                <p className="text-gray-600 text-sm mb-2">
+                  <span className="font-medium text-gray-700">Journal:</span> Audiology Research, 15(2), 39
+                </p>
+                <div className="flex flex-wrap gap-2 mb-2">
+                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Prothèse auditive</span>
+                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Ontologie</span>
+                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">DHAFES</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Lire l'article
+                  </a>
+                  <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
+                    <Download className="w-3 h-3 mr-1" />
+                    Télécharger le PDF
+                  </a>
+                </div>
+              </div>
+              
+              {/* Article 2 - I2HM Project */}
               <div className="py-4">
                 <div className="flex items-center text-sm text-gray-500 mb-1">
                   <Calendar className="w-4 h-4 mr-1" />
                   <span>2023</span>
                 </div>
                 <h3 className="text-lg font-semibold mb-1 text-gray-800">
-                  Development of a Low-Cost Pure Sine Wave Inverter for Rural Electrification in Cameroon
+                  I2HM: Internet of Things and Artificial Intelligence for Health Monitoring
                 </h3>
                 <p className="text-gray-600 mb-2">
-                  Mbou R., Makongo J., Chana A.M.
+                  Chana, A.M., Batchakui, B., Donsez, D., Tchana, A.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium text-gray-700">Journal:</span> IEEE Transactions on Power Electronics, 36(5), 5872-5885
+                  <span className="font-medium text-gray-700">Publication:</span> Laboratoire d'Informatique de Grenoble, Université Grenoble Alpes
+                </p>
+                <div className="flex flex-wrap gap-2 mb-2">
+                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">IoT</span>
+                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Intelligence artificielle</span>
+                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Santé</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Lire l'article
+                  </a>
+                  <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
+                    <Download className="w-3 h-3 mr-1" />
+                    Télécharger le PDF
+                  </a>
+                </div>
+              </div>
+              
+              {/* Article 3 - MLI Inverter */}
+              <div className="py-4">
+                <div className="flex items-center text-sm text-gray-500 mb-1">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <span>2023</span>
+                </div>
+                <h3 className="text-lg font-semibold mb-1 text-gray-800">
+                  Conception et réalisation d'un onduleur MLI à onde sinusoïdale pure
+                </h3>
+                <p className="text-gray-600 mb-2">
+                  Équipe BENDO
+                </p>
+                <p className="text-gray-600 text-sm mb-2">
+                  <span className="font-medium text-gray-700">Type:</span> Rapport technique
                 </p>
                 <div className="flex flex-wrap gap-2 mb-2">
                   <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Onduleur</span>
                   <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">MLI</span>
-                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Électrification rurale</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
-                    <ExternalLink className="w-3 h-3 mr-1" />
-                    Lire l'article
-                  </a>
-                  <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
-                    <Download className="w-3 h-3 mr-1" />
-                    Télécharger le PDF
-                  </a>
-                </div>
-              </div>
-              
-              {/* Article 2 */}
-              <div className="py-4">
-                <div className="flex items-center text-sm text-gray-500 mb-1">
-                  <Calendar className="w-4 h-4 mr-1" />
-                  <span>2022</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-1 text-gray-800">
-                  IoT-Based Soil Quality Analysis for Crop Recommendation in Cameroon Agriculture
-                </h3>
-                <p className="text-gray-600 mb-2">
-                  Tamo P., Fouda E., Chana A.M.
-                </p>
-                <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium text-gray-700">Journal:</span> Smart Agricultural Technology, 2(1), 45-58
-                </p>
-                <div className="flex flex-wrap gap-2 mb-2">
-                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Agriculture</span>
-                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">IoT</span>
-                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Capteurs</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
-                    <ExternalLink className="w-3 h-3 mr-1" />
-                    Lire l'article
-                  </a>
-                  <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
-                    <Download className="w-3 h-3 mr-1" />
-                    Télécharger le PDF
-                  </a>
-                </div>
-              </div>
-              
-              {/* Article 3 */}
-              <div className="py-4">
-                <div className="flex items-center text-sm text-gray-500 mb-1">
-                  <Calendar className="w-4 h-4 mr-1" />
-                  <span>2022</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-1 text-gray-800">
-                  Low-Cost Hearing Aid with Self-Adjustment Features: The Balafon Project
-                </h3>
-                <p className="text-gray-600 mb-2">
-                  Bendo F., Makongo J., Chana A.M.
-                </p>
-                <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium text-gray-700">Journal:</span> Journal of Medical Devices, 16(3), 031004
-                </p>
-                <div className="flex flex-wrap gap-2 mb-2">
-                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Santé</span>
-                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Prothèse auditive</span>
-                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Technologies accessibles</span>
+                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">Électrification</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
@@ -292,28 +293,28 @@ const PublicationsPage = () => {
           
           {/* Conférences */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">Actes de conférences</h2>
+            <h2 className="text-2xl font-bold mb-6 text-gray-800">Actes de conférences et présentations</h2>
             
             <div className="divide-y">
-              {/* Conférence 1 */}
+              {/* Conférence 1 - IoT et Développement Durable */}
               <div className="py-4">
                 <div className="flex items-center text-sm text-gray-500 mb-1">
                   <Calendar className="w-4 h-4 mr-1" />
                   <span>2024</span>
                 </div>
                 <h3 className="text-lg font-semibold mb-1 text-gray-800">
-                  IoT for Road Safety: A Case Study of Dschang Cliff Monitoring System
+                  IoT au service du développement durable : Santé, Sécurité alimentaire et Sécurité routière
                 </h3>
                 <p className="text-gray-600 mb-2">
-                  Ngom L., Kengne C., Chana A.M.
+                  Chana, A.M.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium text-gray-700">Conférence:</span> IEEE International Conference on Connected Vehicles, Johannesburg, South Africa
+                  <span className="font-medium text-gray-700">Présentation:</span> Conférence sur les Objectifs de Développement Durable
                 </p>
                 <div className="flex items-center space-x-3">
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
                     <ExternalLink className="w-3 h-3 mr-1" />
-                    Lire l'acte
+                    Voir la présentation
                   </a>
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
                     <Download className="w-3 h-3 mr-1" />
@@ -322,20 +323,20 @@ const PublicationsPage = () => {
                 </div>
               </div>
               
-              {/* Conférence 2 */}
+              {/* Conférence 2 - Malaria-CAM Project */}
               <div className="py-4">
                 <div className="flex items-center text-sm text-gray-500 mb-1">
                   <Calendar className="w-4 h-4 mr-1" />
-                  <span>2023</span>
+                  <span>2024</span>
                 </div>
                 <h3 className="text-lg font-semibold mb-1 text-gray-800">
-                  Remote Monitoring of Pregnant Women in Rural Cameroon: A LoRaWAN Approach
+                  CAM-MALARIA: Système de surveillance en temps réel pour le paludisme au Cameroun
                 </h3>
                 <p className="text-gray-600 mb-2">
-                  Bendo F., Kamga S., Chana A.M.
+                  Équipe de recherche Malaria-CAM
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium text-gray-700">Conférence:</span> Global Health Innovation Conference, Nairobi, Kenya
+                  <span className="font-medium text-gray-700">Conférence:</span> Symposium sur la santé publique et les technologies innovantes en Afrique
                 </p>
                 <div className="flex items-center space-x-3">
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
@@ -357,67 +358,97 @@ const PublicationsPage = () => {
             </div>
           </div>
           
-          {/* Thèses et mémoires */}
+          {/* Projets de recherche */}
           <div>
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">Thèses et mémoires</h2>
+            <h2 className="text-2xl font-bold mb-6 text-gray-800">Projets de recherche en cours</h2>
             
             <div className="divide-y">
-              {/* Thèse 1 */}
+              {/* Projet 1 - I2HM */}
               <div className="py-4">
                 <div className="flex items-center text-sm text-gray-500 mb-1">
                   <Calendar className="w-4 h-4 mr-1" />
-                  <span>2023</span>
+                  <span>2023-2025</span>
                 </div>
                 <h3 className="text-lg font-semibold mb-1 text-gray-800">
-                  Optimisation des systèmes MPPT pour installations photovoltaïques au Cameroun
+                  I2HM: Internet of Things and Artificial Intelligence for Health Monitoring
                 </h3>
                 <p className="text-gray-600 mb-2">
-                  Mbarga A.
+                  En collaboration avec l'Université Grenoble Alpes et MIAI Grenoble
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium text-gray-700">Type:</span> Thèse de doctorat, Université de Yaoundé I
+                  <span className="font-medium text-gray-700">Chercheurs principaux:</span> Chana A.M., Batchakui B., Donsez D., Tchana A.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium text-gray-700">Directeur:</span> Dr. Robert Mbou
+                  <span className="font-medium text-gray-700">Description:</span> Déploiement de capteurs connectés pour collecter des données environnementales et prédire les risques liés aux maladies vectorielles comme le paludisme.
                 </p>
                 <div className="flex items-center space-x-3">
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
                     <ExternalLink className="w-3 h-3 mr-1" />
-                    Lire le résumé
+                    Détails du projet
                   </a>
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
                     <Download className="w-3 h-3 mr-1" />
-                    Télécharger le PDF
+                    Télécharger la présentation
                   </a>
                 </div>
               </div>
               
-              {/* Mémoire 1 */}
+              {/* Projet 2 - Hearing Aid */}
               <div className="py-4">
                 <div className="flex items-center text-sm text-gray-500 mb-1">
                   <Calendar className="w-4 h-4 mr-1" />
-                  <span>2024</span>
+                  <span>2022-2025</span>
                 </div>
                 <h3 className="text-lg font-semibold mb-1 text-gray-800">
-                  Algorithmes d'IA pour la prédiction du paludisme basés sur les données environnementales
+                  DHAFES: Dynamic Hearing Aid Fitting Expert System
                 </h3>
                 <p className="text-gray-600 mb-2">
-                  Atangana M.
+                  École Nationale Supérieure Polytechnique de Yaoundé et Hôpital Régional de Bertoua
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium text-gray-700">Type:</span> Mémoire de Master, Université de Yaoundé I
+                  <span className="font-medium text-gray-700">Chercheurs:</span> Ngounou G.M., Chana A.M., Batchakui B., Nguen K.A., Fokouo Fogha J.V.
                 </p>
                 <p className="text-gray-600 text-sm mb-2">
-                  <span className="font-medium text-gray-700">Encadrant:</span> Dr. Fatima Bendo
+                  <span className="font-medium text-gray-700">Description:</span> Développement d'un système expert basé sur l'ontologie pour l'ajustement personnalisé des prothèses auditives, notamment la prothèse Balafon.
                 </p>
                 <div className="flex items-center space-x-3">
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
                     <ExternalLink className="w-3 h-3 mr-1" />
-                    Lire le résumé
+                    Détails du projet
                   </a>
                   <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
                     <Download className="w-3 h-3 mr-1" />
-                    Télécharger le PDF
+                    Télécharger la présentation
+                  </a>
+                </div>
+              </div>
+              
+              {/* Projet 3 - Sécurité routière */}
+              <div className="py-4">
+                <div className="flex items-center text-sm text-gray-500 mb-1">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <span>2023-2025</span>
+                </div>
+                <h3 className="text-lg font-semibold mb-1 text-gray-800">
+                  Réseau de capteurs pour la surveillance de la circulation dans les zones dangereuses
+                </h3>
+                <p className="text-gray-600 mb-2">
+                  Étude de cas: Falaise de Dschang au Cameroun
+                </p>
+                <p className="text-gray-600 text-sm mb-2">
+                  <span className="font-medium text-gray-700">Chercheurs:</span> Équipe ODD11
+                </p>
+                <p className="text-gray-600 text-sm mb-2">
+                  <span className="font-medium text-gray-700">Description:</span> Système d'alerte automatique pour les automobilistes en zones dangereuses, intégrant surveillance des conditions du sol et suivi environnemental.
+                </p>
+                <div className="flex items-center space-x-3">
+                  <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Détails du projet
+                  </a>
+                  <a href="#" className="text-emerald-600 hover:text-emerald-700 flex items-center text-xs font-medium">
+                    <Download className="w-3 h-3 mr-1" />
+                    Télécharger la présentation
                   </a>
                 </div>
               </div>

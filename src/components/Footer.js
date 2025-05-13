@@ -74,7 +74,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold text-lg mb-4">Projets</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/projects/mppt" className="hover:text-emerald-400 transition">
+                <Link href="/projects/regulateur-charge-solaire-mppt" className="hover:text-emerald-400 transition">
                   Régulateur MPPT
                 </Link>
               </li>
@@ -89,17 +89,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/projects/pregnant-women-monitoring" className="hover:text-emerald-400 transition">
+                <Link href="#" className="hover:text-emerald-400 transition">
                   Suivi des femmes enceintes
                 </Link>
               </li>
               <li>
-                <Link href="/projects/road-safety" className="hover:text-emerald-400 transition">
+                <Link href="#" className="hover:text-emerald-400 transition">
                   Sécurité routière
                 </Link>
               </li>
               <li>
-                <Link href="/projects/agriculture" className="hover:text-emerald-400 transition">
+                <Link href="#" className="hover:text-emerald-400 transition">
                   Agriculture intelligente
                 </Link>
               </li>
