@@ -363,9 +363,34 @@ const TeamPage = () => {
               <h3 className="text-xl font-bold mb-6 text-emerald-700">Étudiants actuels</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="p-4 border border-gray-100 rounded-lg">
-                  <p className="font-medium text-gray-800">Kevina Anne NGUEN</p>
+                  <p className="font-medium text-gray-800">Kengali Pacome</p>
                   <p className="text-sm text-gray-500 mb-2">Département Informatique, ENSPY</p>
-                  <p className="text-xs text-gray-600">Projet: Système expert pour prothèse auditive (DHAFES)</p>
+                  <p className="text-xs text-gray-600">Projet: Harmony Gloves</p>
+                </div>
+                <div className="p-4 border border-gray-100 rounded-lg">
+                  <p className="font-medium text-gray-800">Mbassi Loic Aron</p>
+                  <p className="text-sm text-gray-500 mb-2">Département Informatique, ENSPY</p>
+                  <p className="text-xs text-gray-600">Projet: Harmony Gloves</p>
+                </div>
+                <div className="p-4 border border-gray-100 rounded-lg">
+                  <p className="font-medium text-gray-800">Maffo Fonkou</p>
+                  <p className="text-sm text-gray-500 mb-2">Département Informatique, ENSPY</p>
+                  <p className="text-xs text-gray-600">Projet: Harmony Gloves</p>
+                </div>
+                <div className="p-4 border border-gray-100 rounded-lg">
+                  <p className="font-medium text-gray-800">Komguem Isis</p>
+                  <p className="text-sm text-gray-500 mb-2">Département Informatique, ENSPY</p>
+                  <p className="text-xs text-gray-600">Projet: Harmony Gloves</p>
+                </div>
+                <div className="p-4 border border-gray-100 rounded-lg">
+                  <p className="font-medium text-gray-800">Igor Mogou</p>
+                  <p className="text-sm text-gray-500 mb-2">Département Informatique, ENSPY</p>
+                  <p className="text-xs text-gray-600">Projet: Harmony Gloves</p>
+                </div>
+                <div className="p-4 border border-gray-100 rounded-lg">
+                  <p className="font-medium text-gray-800">HASSANA</p>
+                  <p className="text-sm text-gray-500 mb-2">Département Informatique, ENSPY</p>
+                  <p className="text-xs text-gray-600">Projet: Harmony Gloves</p>
                 </div>
                 <div className="p-4 border border-gray-100 rounded-lg">
                   <p className="font-medium text-gray-800">Marcelle Abanda Bessala</p>
