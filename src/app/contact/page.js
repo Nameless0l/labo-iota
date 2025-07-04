@@ -1,7 +1,98 @@
-import React from 'react';
-import { MapPin, Phone, Mail, Clock, Send, Users, FileText } from 'lucide-react';
+'use client';
+import React, { useState } from 'react';
+import { MapPin, Phone, Mail, Clock, Send, Users, FileText, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: '',
+    consent: false
+  });
+  
+  const [formStatus, setFormStatus] = useState(''); // 'sending', 'success', 'error'
+  const [errors, setErrors] = useState({});
+  const [openFAQ, setOpenFAQ] = useState(null);
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    if (!formData.firstName.trim()) newErrors.firstName = 'Le prénom est requis';
+    if (!formData.lastName.trim()) newErrors.lastName = 'Le nom est requis';
+    if (!formData.email.trim()) {
+      newErrors.email = 'L\'email est requis';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'L\'email n\'est pas valide';
+    }
+    if (!formData.subject) newErrors.subject = 'Veuillez sélectionner un sujet';
+    if (!formData.message.trim()) newErrors.message = 'Le message est requis';
+    if (!formData.consent) newErrors.consent = 'Vous devez accepter la politique de confidentialité';
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validateForm()) return;
+    
+    setFormStatus('sending');
+    
+    // Simulate form submission
+    setTimeout(() => {
+      setFormStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: '',
+        consent: false
+      });
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setFormStatus(''), 5000);
+    }, 2000);
+  };
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  const toggleFAQ = (index) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      question: "Comment puis-je collaborer avec le laboratoire IoTA ?",
+      answer: "Nous sommes ouverts à différentes formes de collaboration, que ce soit avec des chercheurs, des institutions académiques, des entreprises ou des organisations non gouvernementales. Envoyez-nous un message via notre formulaire de contact en précisant votre domaine d'intérêt et nous vous répondrons dans les plus brefs délais."
+    },
+    {
+      question: "Proposez-vous des stages ou des opportunités pour les étudiants ?",
+      answer: "Oui, nous accueillons régulièrement des stagiaires de niveau master et des doctorants. Les opportunités sont généralement publiées sur notre site web et sur nos réseaux sociaux. Vous pouvez également nous contacter directement pour nous faire part de votre intérêt."
+    },
+    {
+      question: "Proposez-vous des services de consultation pour les entreprises ?",
+      answer: "Oui, notre équipe peut fournir des services de consultation dans nos domaines d'expertise, notamment l'IoT, l'énergie solaire, la santé connectée et l'agriculture intelligente. Contactez-nous pour discuter de vos besoins spécifiques."
+    },
+    {
+      question: "Vos technologies sont-elles disponibles pour une utilisation commerciale ?",
+      answer: "Certaines de nos technologies peuvent être commercialisées via des accords de licence. D'autres sont développées en open source pour maximiser leur impact. Contactez-nous pour discuter des possibilités de transfert de technologie et de partenariat commercial."
+    }
+  ];
   return (
     <div className="min-h-screen pt-24 bg-gray-50">
       {/* Hero Section */}
@@ -27,47 +118,86 @@ const ContactPage = () => {
               <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                 <div className="p-8">
                   <h2 className="text-2xl font-bold mb-6 text-gray-800">Envoyez-nous un message</h2>
-                  <div className="space-y-6">
+                  
+                  {/* Success Message */}
+                  {formStatus === 'success' && (
+                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
+                      <div className="text-green-800">
+                        <p className="font-medium">Message envoyé avec succès!</p>
+                        <p className="text-sm">Nous vous répondrons dans les plus brefs délais.</p>
+                      </div>
+                    </div>
+                  )}
+                  
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
+                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                          Prénom <span className="text-red-500">*</span>
+                        </label>
                         <input 
                           type="text" 
                           id="firstName" 
-                          name="firstName" 
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                          name="firstName"
+                          value={formData.firstName}
+                          onChange={handleChange}
+                          className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent ${
+                            errors.firstName ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                          }`}
                           placeholder="Votre prénom" 
                         />
+                        {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>}
                       </div>
                       <div>
-                        <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">Nom</label>
+                        <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                          Nom <span className="text-red-500">*</span>
+                        </label>
                         <input 
                           type="text" 
                           id="lastName" 
-                          name="lastName" 
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleChange}
+                          className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent ${
+                            errors.lastName ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                          }`}
                           placeholder="Votre nom" 
                         />
+                        {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
                       </div>
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email <span className="text-red-500">*</span>
+                      </label>
                       <input 
                         type="email" 
                         id="email" 
-                        name="email" 
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent ${
+                          errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                        }`}
                         placeholder="Votre adresse email" 
                       />
+                      {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                     </div>
                     
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">Sujet</label>
+                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                        Sujet <span className="text-red-500">*</span>
+                      </label>
                       <select 
                         id="subject" 
-                        name="subject" 
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent ${
+                          errors.subject ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                        }`}
                       >
                         <option value="">Sélectionnez un sujet</option>
                         <option value="collaboration">Proposition de collaboration</option>
@@ -76,37 +206,61 @@ const ContactPage = () => {
                         <option value="press">Demande de presse</option>
                         <option value="other">Autre</option>
                       </select>
+                      {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                        Message <span className="text-red-500">*</span>
+                      </label>
                       <textarea 
                         id="message" 
-                        name="message" 
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
                         rows="5" 
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                        className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent ${
+                          errors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                        }`}
                         placeholder="Votre message" 
                       ></textarea>
+                      {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                     </div>
                     
-                    <div className="flex items-center">
+                    <div className="flex items-start">
                       <input 
                         type="checkbox" 
                         id="consent" 
-                        name="consent" 
-                        className="h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded" 
+                        name="consent"
+                        checked={formData.consent}
+                        onChange={handleChange}
+                        className="h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded mt-1" 
                       />
                       <label htmlFor="consent" className="ml-2 block text-sm text-gray-700">
-                        J'accepte que mes données soient traitées conformément à la politique de confidentialité.
+                        J&apos;accepte que mes données soient traitées conformément à la politique de confidentialité. <span className="text-red-500">*</span>
                       </label>
                     </div>
+                    {errors.consent && <p className="text-red-500 text-sm">{errors.consent}</p>}
                     
                     <div>
-                      <button type="button" className="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-emerald-700 transition flex items-center justify-center">
-                        Envoyer le message <Send className="ml-2 w-4 h-4" />
+                      <button 
+                        type="submit" 
+                        disabled={formStatus === 'sending'}
+                        className="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-emerald-700 transition flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {formStatus === 'sending' ? (
+                          <>
+                            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                            Envoi en cours...
+                          </>
+                        ) : (
+                          <>
+                            Envoyer le message <Send className="ml-2 w-4 h-4" />
+                          </>
+                        )}
                       </button>
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -196,54 +350,35 @@ const ContactPage = () => {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Questions fréquentes</h2>
           
-          <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button className="w-full flex justify-between items-center p-6 text-left font-semibold text-gray-800 hover:bg-gray-50 transition">
-                <span>Comment puis-je collaborer avec le laboratoire IoTA ?</span>
-                <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-              </button>
-              <div className="px-6 pb-6">
-                <p className="text-gray-600">
-                  Nous sommes ouverts à différentes formes de collaboration, que ce soit avec des chercheurs, des institutions académiques, des entreprises ou des organisations non gouvernementales. Envoyez-nous un message via notre formulaire de contact en précisant votre domaine d'intérêt et nous vous répondrons dans les plus brefs délais.
-                </p>
+          <div className="space-y-4">
+            {faqData.map((faq, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+                <button 
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full flex justify-between items-center p-6 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+                >
+                  <span>{faq.question}</span>
+                  <svg 
+                    className={`w-5 h-5 text-gray-500 transform transition-transform ${
+                      openFAQ === index ? 'rotate-180' : ''
+                    }`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24" 
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div className={`overflow-hidden transition-all duration-300 ${
+                  openFAQ === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button className="w-full flex justify-between items-center p-6 text-left font-semibold text-gray-800 hover:bg-gray-50 transition">
-                <span>Proposez-vous des stages ou des opportunités pour les étudiants ?</span>
-                <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-              </button>
-              <div className="px-6 pb-6">
-                <p className="text-gray-600">
-                  Oui, nous accueillons régulièrement des stagiaires de niveau master et des doctorants. Les opportunités sont généralement publiées sur notre site web et sur nos réseaux sociaux. Vous pouvez également nous contacter directement pour nous faire part de votre intérêt.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button className="w-full flex justify-between items-center p-6 text-left font-semibold text-gray-800 hover:bg-gray-50 transition">
-                <span>Proposez-vous des services de consultation pour les entreprises ?</span>
-                <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-              </button>
-              <div className="px-6 pb-6">
-                <p className="text-gray-600">
-                  Oui, notre équipe peut fournir des services de consultation dans nos domaines d'expertise, notamment l'IoT, l'énergie solaire, la santé connectée et l'agriculture intelligente. Contactez-nous pour discuter de vos besoins spécifiques.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button className="w-full flex justify-between items-center p-6 text-left font-semibold text-gray-800 hover:bg-gray-50 transition">
-                <span>Vos technologies sont-elles disponibles pour une utilisation commerciale ?</span>
-                <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-              </button>
-              <div className="px-6 pb-6">
-                <p className="text-gray-600">
-                  Certaines de nos technologies peuvent être commercialisées via des accords de licence. D'autres sont développées en open source pour maximiser leur impact. Contactez-nous pour discuter des possibilités de transfert de technologie et de partenariat commercial.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
