@@ -25,7 +25,7 @@ const HomePage = () => {
       
       <div className="relative h-full flex flex-col justify-center items-center text-white px-4 max-w-6xl mx-auto">
         <div className="mb-8">
-          <img src="/images/logo-iot.png" alt="IoTA Logo" className="w-32 h-32" />
+          <Image src="/images/logo-iot.png" alt="IoTA Logo" width={128} height={128} className="mx-auto" />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold text-center mb-6">
           IoT & Applications
@@ -43,6 +43,31 @@ const HomePage = () => {
         </div>
       </div>
     </div>
+      
+      {/* Statistics Section */}
+      <div className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">12+</div>
+              <div className="text-lg opacity-90">Projets réalisés</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">25+</div>
+              <div className="text-lg opacity-90">Publications</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">50+</div>
+              <div className="text-lg opacity-90">Étudiants formés</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">8+</div>
+              <div className="text-lg opacity-90">Partenaires</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       {/* About Section */}    
       {/* Mission Section */}
       <div className="py-20 bg-gray-50">
