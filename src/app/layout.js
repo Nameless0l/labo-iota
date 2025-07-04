@@ -1,9 +1,6 @@
-import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'IoTA - IoT & Applications | Laboratoire d\'électronique',
@@ -13,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={inter.className}>
+      <body className="font-sans">
         <Header />
         <main>{children}</main>
         <Footer />
